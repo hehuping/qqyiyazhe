@@ -1,0 +1,94 @@
+
+<style>
+.contents{
+	text-align:center;
+	margin:0 auto;
+	background-color: beige;
+	margin-top:60px;
+	height:400px;
+	width:1000px;
+	padding:30px;
+}
+.label{
+	width:100px;
+}
+.cen{
+	text-align:left;
+	margin:0 auto;
+	width:600px;
+}
+.text1 {
+    color: #999;
+    width: 282px;
+    height: 30px;
+    text-indent: 5px;
+    border: 1px solid #d2d2d2;
+    padding: 2px 3px;
+    line-height: 30px;
+    border-radius: 5px;
+}
+.area{
+ border: 1px solid #d2d2d2;
+ border-radius: 5px;
+	width:400px;
+	height:200px;
+}
+.label {
+	
+    text-align: right;
+    width: 100px;
+    float: left;
+    line-height: 30px;
+}
+.sub {
+    line-height: 0;
+    border-radius: 2px;
+    cursor: pointer;
+    width: 100px;
+    height: 32px;
+    border: 1px solid #ff2d5e;
+    background: #ff2d5e;
+    color: #fff;
+    margin-left:100px;
+}
+</style>
+
+
+<div class="contents">
+	<div class="cen">
+		<span class="label">您的手机号：</span><input id="phone" type="text" class="text1"/><br><br>
+		<span class="label">您的意见：</span><textarea id="content" class="area" placeholder="如果您在使用咿呀折的过程中，有良好的建议和意见，欢迎通过“意见反馈箱”反馈给我们，咿呀折衷心感谢您的建议，谢谢 ~~"></textarea> <br><br>
+		<span class="label">验证码：</span><input id="code" type="text" class="text1" style="width:200px;"/><a href="javascript:void(0);" id="btnSendCode">&nbsp&nbsp<img width="110px" src="/Login/getVerify" onclick="this.src='/Login/getVerify?d='+Math.random();"></img></a><span>点击图片可刷新</span><br><br>
+		<input onclick="submits()" type="button" value="提交" class="sub"/>
+	</div>
+
+</div>
+<script type="text/javascript">
+function submits(){
+	var phone = $("#phone").val();
+	var content = $("#content").val();
+	var code = $("#code").val();
+	if(phone=="" || content=="" || code==""){
+		sweetAlert("出错啦", "表单不能为空，请检查",'warning');
+		return false;
+	}
+	$.ajax({
+        type: "POST",
+        url: "/question/index",
+        data: {'phone':phone, 'content':content, 'code':code},
+        dataType: "json",
+        success: function(data){
+        			if(data.s == 0){
+        				sweetAlert("提交成功", '感谢您的反馈，我们会认真对待您的每一条建议，谢谢~！','success');
+        				setTimeout("window.location.reload(true)",2000);
+        				
+        			}else{
+        				sweetAlert("有点小错误", data.error,'warning');
+        			}
+                 }
+    });
+}
+</script>
+
+
+</script>
