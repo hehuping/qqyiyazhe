@@ -134,7 +134,7 @@ function submit(){
 }
 
 function is_login(){
-	if(!login){
+	/*if(!login){
 		swal({   
 			title: "", 
 			text: "亲爱的，你还没登录哦，去登录吧？", 
@@ -149,7 +149,8 @@ function is_login(){
 		return false;
 	}else{
 		return true;
-	}
+	}*/
+	return true;
 }
 
 /*

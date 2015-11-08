@@ -620,15 +620,15 @@ dialog::backdrop {
     background-color: rgba(0, 0, 0, .3);
 }
 
-/****************************************/
+
 .favorate{
 	position: absolute;
     top: 5px;
     right: 5px;
     display:none;
 }
-
+/***************************************
 .goods_pic:hover .favorate{
 	display:block;
 	cursor:pointer
-}
+}*/

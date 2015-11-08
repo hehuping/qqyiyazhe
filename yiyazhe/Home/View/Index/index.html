@@ -206,7 +206,7 @@
 
 <body>  
 <div class="header">
-    <div class="header_up">
+    <!--  <div class="header_up">
         <div class="center">
             <ul class="top_navbar">
             <?php $login=session('user.uid'); if(!$login){ ?>
@@ -229,7 +229,7 @@
                 <li><a href="#">卖家报名</a></li>
             </ul>
         </div>
-    </div>
+    </div>-->
     <div class="header_down">
         <div class="center">
             <div class="logo">
@@ -320,8 +320,8 @@
 	                    <span>文体</span>
 	                </a>
 	            </li>	            	
-	                <a href="javascript:void(0)" id="cellclien">手机客户端<img class="qrcode" src="__PUBLIC__/images/index/qrcode.png" /></a>          
-	                <a href="javascript:void(0)" id="jifen" <?php $qiandao=session('user.qiandao');if(!$qiandao){ ?>  onclick="qiandao()"<?php } ?>><?php $qiandao=session('user.qiandao'); if($qiandao){echo "已签到 ";}else{echo "签到领积分";} ?></a>      
+	                <!-- <a href="javascript:void(0)" id="cellclien">手机客户端<img class="qrcode" src="__PUBLIC__/images/index/qrcode.png" /></a>          
+	                <a href="javascript:void(0)" id="jifen" <?php $qiandao=session('user.qiandao');if(!$qiandao){ ?>  onclick="qiandao()"<?php } ?>><?php $qiandao=session('user.qiandao'); if($qiandao){echo "已签到 ";}else{echo "签到领积分";} ?></a>   -->    
 	        </ul>
 	    </div>
 	</div>
@@ -401,7 +401,6 @@
                     <li class="goods_pic">
                         <a href="/Jump/jump/id/{$v['gid']}" target="_blank"><div class="big"><img src="{$v['gimage']}" alt="{$v['title']}"/></div></a>
                         <?php $pos=strpos($v['star_time'], $today); if($pos!==false){ ?><img src="__PUBLIC__/images/index/xinpin.png" alt="今日上新" class="new"/><?php } ?>
-                        <img alt="收藏" <?php $has=cookie("fav".$v['gid']); if(empty($has)){ ?>onclick="favorate({$v['gid']});"<?php } ?> id="favorate{$v['gid']}" src="__PUBLIC__/images/index/<?php if($has){echo 'favorates.png';}else{echo 'favorate.png';} ?>" alt="" class="favorate"/>
                     </li>
                     <li class="goods_title"><p><a href="/Jump/jump/id/{$v['gid']}" target="_blank">【{$v['cate']}】{$v['title']}</a></p></li>
                     <li class="goods_info">
@@ -507,15 +506,15 @@
 </div>
 <div class="right_fix_nav">
     <ul>
-        <li>
-            <a href="/user"><img src="__PUBLIC__/images/index/float_01.png" alt="用户中心"/><span>用户</span></a>
+         <li>
+            <!-- <a href="/user"><img src="__PUBLIC__/images/index/float_01.png" alt="用户中心"/><span>用户</span></a> -->
         </li>
         <li>
-            <a href="/user/favorate"><img src="__PUBLIC__/images/index/float_02.png" alt="我的收藏"/><span>收藏</span></a>
+            <!-- <a href="/user/favorate"><img src="__PUBLIC__/images/index/float_02.png" alt="我的收藏"/><span>收藏</span></a> -->
         </li>
         <li>
-            <a href="/user/comment"><img src="__PUBLIC__/images/index/float_03.png" alt="我的评论"/><span>评论</span></a>
-        </li>
+            <!-- <a href="/user/comment"><img src="__PUBLIC__/images/index/float_03.png" alt="我的评论"/><span>评论</span></a> -->
+        </li> 
         <li id="weibo">
       	  <img class="weibocode" src="__PUBLIC__/images/index/weiboqr.png"  />
             <a href="javascript:void(0)"><img src="__PUBLIC__/images/index/float_04.png" alt="关注微博"/><span>微博</span></a>
@@ -574,15 +573,7 @@ var _hmt = _hmt || [];
   hm.src = "//hm.baidu.com/hm.js?87d53a4157d24fd8de035acfe32d9886";
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
-})();
-
-//百度自动推送代码
-(function(){
-    var bp = document.createElement('script');
-    bp.src = '//push.zhanzhang.baidu.com/push.js';
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();          
+})();         
 </script>
 
 <!-- baidu 统计代码开始 -->

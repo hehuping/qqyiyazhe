@@ -104,7 +104,7 @@ class IndexController extends Controller {
 		}
 		$comment_model = M('comment');
 		$goods_model = M('goods');
-		$has = $comment_model->where('gid='.$gid.' && uid='.$uid)->find();
+		$has = false;//$comment_model->where('gid='.$gid.' && uid='.$uid)->find();
 		
 		if($has){
 			$arr['s'] = 2;
@@ -116,10 +116,10 @@ class IndexController extends Controller {
 		if(IS_AJAX){
 			
 			$data = array(
-					'uid' => $uid,
+					'uid' => 0,
 					'gid' => $gid,
 					'content' => I('content'),
-					'username' => session('user.username'),
+					'username' => "qquser",
 			);
 			if($comment_model->add($data)){
 				$goods_model->where('gid='.$gid)->setInc('comment',1);
