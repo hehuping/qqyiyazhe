@@ -20,7 +20,49 @@
    src="http://fusion.qq.com/fusion_loader?appid=1104952888&platform=qzone">
 </script>
 </head>
+<script type="text/javascript">
+ function gotoUrl(THIS){
+	//alert(THIS.getAttribute('url'));
+    fusion2.nav.open
+({
+    //外链URL
+   // url : "http://www.taobao.com"
+	//url : "http://www.paipai.com,http://www.taobao.com,http://www.tmall.com,http://www.360buy.com"
+  url : THIS.getAttribute('url')
+  })
+}
 
+
+function invite() {
+
+fusion2.dialog.invite
+
+({  
+
+  msg  : "Hi~ 同学！ 咿呀折校园9.9是每个学生党必备省钱神器哟！",
+
+  img : "",
+  
+  source : "invite&fromqq=595549109&fromId=1",
+
+  context : "invite",
+
+  //onSuccess : function (ret) {  alert("邀请成功"); },
+  onSuccess : function (opt) { 
+  alert("发送成功" );  	
+	 },
+  onCancel : function () { 
+  //alert("邀请取消");
+   },
+
+  onClose : function () { 
+   //alert("邀请关闭");
+    }
+});
+
+}
+ 
+</script>
 <style>
 .big:hover > img {
     transform: scale(1.05, 1.05);
