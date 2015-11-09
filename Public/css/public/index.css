@@ -8,11 +8,10 @@ a:active,a:focus {
 }
 .center{
     margin:0 auto;
-    width: 1200px;
+    width: 950px;
 }
 .header{
-    max-width: 1920px;
-    min-width: 1200px;
+    width:950px;
 }
 .header_up{
     /*border-bottom: 1px solid #e5e5e5;*/
@@ -58,8 +57,8 @@ a:active,a:focus {
     margin:0 20px;
 }
 .search{
-    width:500px;
     height:90px;
+    margin-top:50px;
 
 }
 .search_box{
@@ -115,6 +114,7 @@ a:active,a:focus {
 
 
 .goods_navbar{
+	width:950px;
     background: #fb6d78;
     overflow: hidden;
     clear: both;
@@ -168,8 +168,7 @@ a:active,a:focus {
 
 /*****************分类页面样式******************/
 .contentgirl{
-    max-width: 1920px;
-    min-width: 1200px;
+    width:950px;
     background: #F9D6D8;
     padding-bottom: 80px;
 }
@@ -182,10 +181,7 @@ a:active,a:focus {
     font-size: 0.75em;
 }
 .contentboy{
-    max-width: 1920px;
-    min-width: 1200px;
     background: #F9D6D8;
-    padding-bottom: 80px;
 }
 .contentboy .center>h3{
     padding:30px 0  10px 10px;
@@ -248,7 +244,7 @@ a:active,a:focus {
 
 
 .new_goods{
-    /*margin-top: 20px;*/
+    margin-top: 20px;
     overflow: hidden;
 }
 
@@ -446,11 +442,8 @@ a:active,a:focus {
 }
 
 .footer{
-    max-width: 1920px;
-    min-width: 1200px;
-    padding-bottom: 50px;
+    width:950px;
     overflow: hidden;
-    padding-top: 30px;
 }
 .footer_up{
     background: #fb7c84;

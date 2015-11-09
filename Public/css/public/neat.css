@@ -29,7 +29,10 @@ thead, tbody, tfoot, th, td /* th, td 默认 padding:1px */
     margin:0;
     padding:0;
 }
-
+div{
+	margin:0 auto;
+	text-align:center;
+}
 /**
  * 非大面积文字排版网站通常不需要列表项，如果需要可单独设置
  */

@@ -4,14 +4,13 @@ a:active,a:focus {
 }
 .center{
     margin:0 auto;
-    width: 1200px;
+    width: 950px;
 }
 .vice {
     font-size: 0.75em;
 }
 .header{
-    max-width: 1920px;
-    min-width: 1200px;
+   width:950px;
 }
 .header_up{
     /*border-bottom: 1px solid #e5e5e5;*/
@@ -47,6 +46,7 @@ a:active,a:focus {
 .header_down{
     height:90px;
     line-height: 90px;
+    width: 950px;
 }
 .header_down .logo,.search,.top_text{
 
@@ -57,8 +57,9 @@ a:active,a:focus {
     margin:0 20px;
 }
 .search{
-    width:500px;
+    
     height:90px;
+    margin-top:50px
 
 }
 .search_box{
@@ -117,6 +118,7 @@ a:active,a:focus {
     background: #fb6d78;
     overflow: hidden;
     clear: both;
+    width: 950px;
 }
 .goods_navbar ul{
     margin-left: 20px;
@@ -149,10 +151,11 @@ a:active,a:focus {
 
 
 .content{
-    max-width: 1920px;
-    min-width: 1200px;
+   
+   width: 950px;
     background: #ededef;
     padding-bottom: 80px;
+    margin-top: 60px;
 
 }
 
@@ -216,6 +219,7 @@ a:active,a:focus {
 .new_goods{
     margin-top: 20px;
     overflow: hidden;
+    width: 950px;
 }
 
 .new_goods_list{
@@ -412,9 +416,7 @@ a:active,a:focus {
 }
 
 .footer{
-    max-width: 1920px;
-    min-width: 1200px;
-    padding-bottom: 50px;
+   width: 950px;
     overflow: hidden;
 }
 .footer_up{
