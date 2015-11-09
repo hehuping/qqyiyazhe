@@ -16,6 +16,9 @@
     <link rel="stylesheet" href="__PUBLIC__/css/index/neat.css" type="text/css"  />
     <link rel="stylesheet" href="__PUBLIC__/css/index/index.css" type="text/css"  />
     <link rel="stylesheet" href="__PUBLIC__/css/index/sweet-alert.css" />
+    <script type="text/javascript" charset="utf-8" 
+   src="http://fusion.qq.com/fusion_loader?appid=1104952888&platform=qzone">
+</script>
 </head>
 
 <style>
@@ -369,7 +372,8 @@
             <li class="star_goods_list">
                 <ul>
                     <li class="goods_pic">
-                      <a href="/Jump/jump/id/{$vs['gid']}" target="_blank"><div class="small"><img src="{$vs['gimage']}" alt="{$vs['title']}"/></div></a>
+                    <a href="javascript:void(0);" onclick="fusion2.nav.open({url : 'http://qq.yiyazhe.com/Jump/jump/id/{$vs['gid']}'}); return false;"><div class="small"><img src="{$vs['gimage']}" alt="{$vs['title']}"/></div></a>
+                      <!-- <a href="/Jump/jump/id/{$vs['gid']}" target="_blank"></a> -->
                       <img src="__PUBLIC__/images/index/NO<?php echo $ks+1; ?>.png" alt="" class="NO_num"/>
                     </li>
                     <li class="goods_title"><p><a href="/Jump/jump/id/{$vs['gid']}">{$vs['title']}</a></p></li>
